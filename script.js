@@ -24,27 +24,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission handling with quirky success message
+// Form submission handling with success message
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Create a fun success message
-        const messages = [
-            "Message received! 🛡️ Security check passed!",
-            "Your message is now in my secure inbox! 🔒",
-            "Message encrypted and stored safely! 🎯",
-            "Thanks! I'll decrypt your message soon! 🔐"
-        ];
-        
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const randomMessage = "Message received!"
         alert(randomMessage);
         this.reset();
     });
 }
 
-// Add animation on scroll with quirky timing
+// Add animation on scroll 
 const observerOptions = {
     threshold: 0.1
 };
@@ -66,7 +58,7 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Add quirky hover effect to skill tags
+// Add hover effect to skill tags
 document.querySelectorAll('.skill-tag').forEach(tag => {
     tag.addEventListener('mouseover', () => {
         const colors = ['#87A878', '#B5C7A3', '#D4AF37', '#FFD700'];
